@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavtreeComponent } from './navtree.component';
+import { PlaylistsComponent } from './playlists.component';
 
-describe('NavtreeComponent', () => {
-  let component: NavtreeComponent;
-  let fixture: ComponentFixture<NavtreeComponent>;
+describe('PlaylistsComponent', () => {
+  let component: PlaylistsComponent;
+  let fixture: ComponentFixture<PlaylistsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavtreeComponent]
+      imports: [PlaylistsComponent]
     })
     .compileComponents();
-
-    fixture = TestBed.createComponent(NavtreeComponent);
+    
+    fixture = TestBed.createComponent(PlaylistsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
