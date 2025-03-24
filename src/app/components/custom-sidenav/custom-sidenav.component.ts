@@ -18,43 +18,55 @@ export type MenuItem = {
 }
 
 @Component({
-    selector: 'app-custom-sidenav',
-    imports: [CommonModule, MatListModule, MatIconModule, MenuItemComponent],
-    templateUrl: './custom-sidenav.component.html',
-    styleUrl: './custom-sidenav.component.scss'
+  selector: 'app-custom-sidenav',
+  imports: [CommonModule, MatListModule, MatIconModule, MenuItemComponent],
+  templateUrl: './custom-sidenav.component.html',
+  styleUrl: './custom-sidenav.component.scss'
 })
 export class CustomSidenavComponent {
 
-  sideNavCollapsed=signal(false);
-  @Input() set collapsed(val: boolean){
+  sideNavCollapsed = signal(false);
+  @Input() set collapsed(val: boolean) {
     this.sideNavCollapsed.set(val);
   }
 
   menuItems = signal<MenuItem[]>([
     {
       icon: 'dashboard',
-      label: 'Dashboard',
+      label: '仪表盘',
       route: 'dashboard',
     },
     {
-      icon: 'video_library',
-      label: 'Content',
+      icon: 'settings_system_daydream',
+      label: '系统管理',
       route: 'content',
       subItems: [
         {
-          icon: 'play_circle',
-          label: 'Videos',
+          icon: 'person',
+          label: '用户管理',
           route: 'videos',
         },
         {
-          icon: 'playlist_play',
-          label: 'Playlists',
+          icon: 'group',
+          label: '角色管理',
           route: 'playlists',
         },
         {
-          icon: 'post_add',
-          label: 'Posts',
-          route: 'posts',
+          icon: 'assignment_ind',
+          label: '权限管理1',
+          route: 'posts1',
+        }
+      ],
+    },
+    {
+      icon: 'settings_system_daydream',
+      label: '系统管理',
+      route: 'content1',
+      subItems: [        
+        {
+          icon: 'assignment_ind',
+          label: '权限管理2',
+          route: 'posts2',
         }
       ],
     },
@@ -70,5 +82,5 @@ export class CustomSidenavComponent {
     }
   ]);
 
-  profilePicSize= computed(()=> this.sideNavCollapsed() ? '32' : '100');
+  profilePicSize = computed(() => this.sideNavCollapsed() ? '32' : '100');
 }

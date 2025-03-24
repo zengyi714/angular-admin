@@ -30,7 +30,17 @@ export const routes: Routes = [
                 component: PlaylistsComponent,
             },
             {
-                path: 'posts',
+                path: 'posts1',
+                component: PostsComponent,
+            }
+        ],
+    },
+    {
+        path: 'content1',
+        component: ContentComponent,
+        children: [
+            {
+                path: 'posts2',
                 component: PostsComponent,
             }
         ],

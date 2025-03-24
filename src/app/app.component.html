@@ -1,7 +1,17 @@
 <mat-toolbar class="mat-elevation-z3">
-  <button mat-icon-button (click)="collapsed.set(!collapsed())">
-    <mat-icon>menu</mat-icon>
-  </button>
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="collapsed.set(!collapsed())">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>管理系统脚手架</span>
+    <span class="toolbar-spacer"></span>
+    <button mat-icon-button>
+      <mat-icon>person</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar-row>
 </mat-toolbar>
 
 <mat-sidenav-container>
