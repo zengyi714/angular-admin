@@ -17,33 +17,33 @@ export const routes: Routes = [
         path: 'dashboard',
         component: DashboardComponent,
     },
-    {
-        path: 'content',
-        component: ContentComponent,
-        children: [
+    // {
+        // path: 'content',
+        // component: ContentComponent,
+        // children: [
             {
-                path: 'videos',
+                path: 'content/videos',
                 component: VideosComponent,
             },
             {
-                path: 'playlists',
+                path: 'content/playlists',
                 component: PlaylistsComponent,
             },
             {
-                path: 'posts1',
+                path: 'content/posts1',
                 component: PostsComponent,
-            }
-        ],
+        //     }
+        // ],
     },
     {
-        path: 'content1',
-        component: ContentComponent,
-        children: [
-            {
-                path: 'posts2',
+    //     path: 'content1',
+    //     component: ContentComponent,
+    //     children: [
+    //         {
+                path: 'content1/posts2',
                 component: PostsComponent,
-            }
-        ],
+        //     }
+        // ],
     },
     {
         path: 'analytics',

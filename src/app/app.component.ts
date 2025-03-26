@@ -21,5 +21,5 @@ export class AppComponent {
   /* Codigo para la parte de colapsar el menu */
   collapsed = signal(false);
   sidenavWidth = computed(() => this.collapsed() ? '65px' : '250px');
-  
+
 }
